@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Narendra Avula | Portfolio</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -10,7 +10,8 @@
   <header>
     <nav>
       <h1>Narendra Avula</h1>
-      <ul>
+      <button id="menu-toggle" class="hamburger">☰</button>
+      <ul id="nav-links" class="collapsed">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -78,8 +79,15 @@
 
   <script>
     const toggle = document.getElementById('theme-toggle');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
     toggle.onclick = () => {
       document.body.classList.toggle('dark-mode');
+    };
+
+    menuToggle.onclick = () => {
+      navLinks.classList.toggle('collapsed');
     };
   </script>
 </body>
